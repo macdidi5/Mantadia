@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="0"
+    android:paddingBottom="1dp"
+    android:paddingLeft="4dp"
+    android:paddingRight="4dp"
+    android:paddingTop="5dp" >
+    <!-- 序號 -->
+    <TextView
+        android:id="@+id/checkout_confirm_serial"
+        android:layout_width="0.3in"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:gravity="center"
+        android:padding="5sp" />
+    <!-- 菜單名稱 -->
+    <TextView
+        android:id="@+id/checkout_confirm_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/checkout_confirm_serial"
+        android:padding="5sp" />
+    <!-- 金額 -->
+    <TextView
+        android:id="@+id/checkout_confirm_amount"
+        android:layout_width="0.4in"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:padding="5sp" />
+    <!-- 價格 -->
+    <TextView
+        android:id="@+id/checkout_confirm_price"
+        android:layout_width="0.4in"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/checkout_confirm_amount"
+        android:gravity="center"
+        android:padding="5sp" />
+    <!-- 數量 -->
+    <TextView
+        android:id="@+id/checkout_confirm_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/checkout_confirm_price"
+        android:padding="5sp" />
+</RelativeLayout>

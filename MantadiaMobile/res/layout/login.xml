@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:orientation="vertical" >
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#555"
+        android:paddingBottom="1dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:paddingTop="5dp"
+        android:stretchColumns="1" >
+        <!-- 帳號 -->
+        <TableRow>
+            <TextView
+                style="@style/medium_font"
+                android:text="@string/login_account_txt" />
+            <EditText
+                android:id="@+id/login_account"
+                style="@style/medium_font"
+                android:text="john" />
+        </TableRow>
+        <!-- 密碼 -->
+        <TableRow>
+            <TextView
+                style="@style/medium_font"
+                android:text="@string/login_password_txt" />
+            <EditText
+                android:id="@+id/login_password"
+                style="@style/medium_font"
+                android:password="true"
+                android:text="hello" />
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:background="@android:drawable/bottom_bar"
+        android:orientation="horizontal"
+        android:paddingBottom="1dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:paddingTop="5dp" >
+        <!-- 結束 -->
+        <Button
+            android:id="@+id/login_exit"
+            style="@style/medium_font"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/common_exit_txt" />
+        <!-- 設定 -->
+        <Button
+            android:id="@+id/login_config"
+            style="@style/medium_font"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/config_title_txt" />
+        <!-- 登入 -->
+        <Button
+            android:id="@+id/login_ok"
+            style="@style/medium_font"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="@android:string/ok" />
+    </LinearLayout>
+</LinearLayout>

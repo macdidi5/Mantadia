@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <LinearLayout
+        android:id="@+id/login_panel"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:baselineAligned="false"
+        android:orientation="vertical" >
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/panel_drawable"
+            android:paddingBottom="1dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:paddingTop="5dp"
+            android:stretchColumns="1" >
+            <TableRow>
+                <TextView
+                    style="@style/medium_font"
+                    android:text="@string/login_account_txt" />
+                <!-- 帳號 -->
+                <EditText
+                    android:id="@+id/login_account"
+                    style="@style/medium_font"
+                    android:text="john" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    style="@style/medium_font"
+                    android:text="@string/login_password_txt" />
+                <!-- 密碼 -->
+                <EditText
+                    android:id="@+id/login_password"
+                    style="@style/medium_font"
+                    android:inputType="textPassword"
+                    android:text="hello" />
+            </TableRow>
+        </TableLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:background="@drawable/panel_drawable"
+            android:orientation="horizontal"
+            android:paddingBottom="1dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:paddingTop="5dp" >
+            <!-- 確定 -->
+            <Button
+                android:id="@+id/login_exit"
+                style="@style/medium_font"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="okAndExit"
+                android:text="@string/common_exit_txt" />
+            <!-- 結束 -->
+            <Button
+                android:id="@+id/login_ok"
+                style="@style/medium_font"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:onClick="okAndExit"
+                android:text="@android:string/ok" />
+        </LinearLayout>
+        <!-- 切換設定面板按鈕 -->
+        <ImageButton
+            android:id="@+id/switch_panel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@android:drawable/bottom_bar"
+            android:onClick="switchConfigPanel"
+            android:paddingBottom="12dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:paddingTop="12dp"
+            android:src="@drawable/expand" />
+        <!-- 設定面板 -->
+        <TableLayout
+            android:id="@+id/config_panel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#555"
+            android:paddingBottom="1dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:paddingTop="12dp"
+            android:stretchColumns="1"
+            android:visibility="invisible" >
+            <TableRow>
+                <TextView
+                    style="@style/medium_font"
+                    android:text="@string/config_server_ip_title_txt" />
+                <!-- 伺服器IP位址 -->
+                <EditText
+                    android:id="@+id/server_ip"
+                    style="@style/medium_font" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    style="@style/medium_font"
+                    android:text="@string/config_server_port_title_txt" />
+                <!-- 伺服器埠號 -->
+                <EditText
+                    android:id="@+id/server_port"
+                    style="@style/medium_font" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+</RelativeLayout>

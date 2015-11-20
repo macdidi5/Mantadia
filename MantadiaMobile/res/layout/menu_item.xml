@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#555"
+        android:paddingBottom="1dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:paddingTop="5dp"
+        android:stretchColumns="1" >
+        <TableRow>
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:text="@string/menu_item_type_name_txt"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+            <!-- 選擇菜單種類 -->
+            <Spinner
+                android:id="@+id/menu_type_name"
+                android:layout_span="3"
+                android:prompt="@string/menu_item_select_type_txt" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:text="@string/menu_item_name_txt"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+            <!-- 選擇菜單 -->
+            <Spinner
+                android:id="@+id/menu_item_name"
+                android:layout_span="3"
+                android:prompt="@string/menu_item_select_item_txt" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:text="@string/menu_item_number_txt"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+            <!-- 菜單編號 -->
+            <EditText
+                android:id="@+id/menu_item_number"
+                android:focusable="false"
+                android:gravity="center" />
+            <!-- 增加數量 -->
+            <ImageButton
+                android:id="@+id/menu_item_add_number"
+                android:src="@drawable/add" />
+            <!-- 減少數量 -->
+            <ImageButton
+                android:id="@+id/menu_item_minus_number"
+                android:src="@drawable/minus" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:text="@string/menu_item_note_txt"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+            <!-- 備註 -->
+            <EditText
+                android:id="@+id/menu_item_note"
+                android:layout_span="3" />
+        </TableRow>
+    </TableLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:background="@android:drawable/bottom_bar"
+        android:orientation="horizontal"
+        android:paddingBottom="1dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:paddingTop="5dp" >
+        <!-- 取消 -->
+        <Button
+            android:id="@+id/menu_item_cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@android:string/cancel"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+        <!-- 確定 -->
+        <Button
+            android:id="@+id/menu_item_ok"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="@android:string/ok"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </LinearLayout>
+</LinearLayout>

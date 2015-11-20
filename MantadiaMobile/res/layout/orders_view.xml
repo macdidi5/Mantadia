@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="0"
+    android:paddingBottom="1dp"
+    android:paddingLeft="4dp"
+    android:paddingRight="4dp"
+    android:paddingTop="5dp" >
+    <!-- 訂單明細序號 -->
+    <TextView
+        android:id="@+id/order_item_serial"
+        android:layout_width="0.3in"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:gravity="center"
+        android:padding="5sp" />
+    <!-- 菜單名稱 -->
+    <TextView
+        android:id="@+id/order_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/order_item_serial"
+        android:padding="5sp" />
+    <!-- 刪除菜單 -->
+    <ImageButton
+        android:id="@+id/order_item_delete"
+        android:layout_width="0.3in"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:padding="5sp"
+        android:src="@drawable/delete" />
+    <!-- 修改菜單 -->
+    <ImageButton
+        android:id="@+id/order_item_update"
+        android:layout_width="0.3in"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/order_item_delete"
+        android:padding="5sp"
+        android:src="@drawable/edit" />
+    <!-- 數量 -->
+    <TextView
+        android:id="@+id/order_item_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/order_item_update"
+        android:padding="5sp" />
+</RelativeLayout>

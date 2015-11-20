@@ -1,0 +1,8 @@
+<resources>
+
+    <style name="medium_font">
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+        <item name="android:padding">3sp</item>
+    </style>
+
+</resources>

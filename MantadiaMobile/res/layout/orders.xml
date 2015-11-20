@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:background="@android:drawable/bottom_bar"
+        android:orientation="horizontal"
+        android:paddingBottom="1dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:paddingTop="5dp" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text="@string/orders_table_id_txt"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#000" />
+                <!-- 餐桌編號 -->
+                <EditText
+                    android:id="@+id/orders_table_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#000" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text="@string/orders_number_txt"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#000" />
+                <!-- 人數 -->
+                <EditText
+                    android:id="@+id/orders_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#000" />
+                <!-- 增加人數 -->
+                <ImageButton
+                    android:id="@+id/orders_add_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:src="@drawable/add" />
+                <!-- 減少人數 -->
+                <ImageButton
+                    android:id="@+id/orders_minus_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:src="@drawable/minus" />
+            </LinearLayout>
+            <!-- 點餐 -->
+            <Button
+                android:id="@+id/orders_add_menuitem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/orders_add_menuitem_txt"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:paddingBottom="1dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:paddingTop="5dp" >
+        <TextView
+            android:id="@+id/orders_title_serial"
+            android:layout_width="0.3in"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:padding="5sp"
+            android:text="@string/orders_serial_txt" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/orders_title_serial"
+            android:padding="5sp"
+            android:text="@string/orders_menuitem_name_txt" />
+        <TextView
+            android:id="@+id/orders_title_delete"
+            android:layout_width="0.3in"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:padding="5sp"
+            android:text="@string/orders_menuitem_delete_txt" />
+        <TextView
+            android:id="@+id/order_title_update"
+            android:layout_width="0.3in"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/orders_title_delete"
+            android:gravity="center"
+            android:padding="5sp"
+            android:text="@string/orders_menuitem_update_txt" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/order_title_update"
+            android:padding="5sp"
+            android:text="@string/orders_menuitem_number_txt" />
+    </RelativeLayout>
+    <!-- 訂單明細 -->
+    <ListView
+        android:id="@+id/orders_items"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:dividerHeight="2sp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:background="@android:drawable/bottom_bar"
+        android:orientation="horizontal"
+        android:paddingBottom="1dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:paddingTop="5dp" >
+        <!-- 取消 -->
+        <Button
+            android:id="@+id/orders_cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@android:string/cancel"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+        <!-- 確定 -->
+        <Button
+            android:id="@+id/orders_ok"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@android:string/ok"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </LinearLayout>
+</LinearLayout>

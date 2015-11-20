@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <!-- 已選擇菜單圖片 -->
+    <ImageView
+        android:id="@+id/selected_menu_item_image"
+        android:layout_width="128sp"
+        android:layout_height="128sp"
+        android:layout_centerInParent="true"
+        android:layout_margin="6sp"
+        android:background="@drawable/panel_drawable"
+        android:padding="6sp" />
+</merge>

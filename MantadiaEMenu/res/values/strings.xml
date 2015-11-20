@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Mantadia eMenu</string>
+    
+    <string name="common_exit_txt">結束</string>
+    
+    <string name="login_title_txt">登入</string>
+    <string name="login_account_txt">帳號</string>
+    <string name="login_password_txt">密碼</string>
+    <string name="login_error_retry_txt">用戶名稱或密碼錯誤，請重新輸入</string>
+    <string name="login_error_account_txt">帳號不可以空白</string>
+    <string name="login_error_password_txt">密碼不可以空白</string>
+    <string name="login_error_network_txt">未開啟網路</string>
+    
+    <string name="main_menu_title_txt">主選單</string>
+    <string name="main_menu_banner_txt">Mantadia Mobile</string>
+    <string name="main_menu_footer_txt">Powered by Chang Yi Yu</string>
+    <string name="main_menu_exit_txt">確定要離開?</string>
+    
+    <string name="table_status_title_txt">查詢餐桌</string>
+    <string name="table_status_table_number_txt">桌號</string>
+    <string name="table_status_info_txt">資訊</string>
+    <string name="table_status_orders_id_txt">訂單:</string>
+    <string name="table_status_orders_number_txt">人數:</string>
+    <string name="table_status_orders_time_txt">時間:</string>
+    <string name="table_status_orders_username_txt">點餐:</string>
+    <string name="table_status_orders_status_txt">狀態:</string>
+    
+    <string name="orders_title_txt">點菜</string>
+    <string name="orders_table_id_txt">桌號:</string>
+    <string name="orders_number_txt">人數:</string>
+    <string name="orders_add_menuitem_txt">新增菜單</string>
+    <string name="orders_serial_txt">序號</string>
+    <string name="orders_menuitem_name_txt">名稱</string>
+    <string name="orders_menuitem_delete_txt">刪除</string>
+    <string name="orders_menuitem_update_txt">修改</string>
+    <string name="orders_menuitem_number_txt">數量</string>
+    <string name="orders_input_number_etxt">請輸入人數</string>
+    <string name="orders_add_menuitem_etxt">請加入菜單</string>
+    
+    <string name="menu_item_title_txt">菜單</string>
+    <string name="menu_item_type_name_txt">種類</string>
+    <string name="menu_item_select_type_txt">選擇菜單種類</string>
+    <string name="menu_item_name_txt">名稱</string>
+    <string name="menu_item_select_item_txt">選擇菜單</string>
+    <string name="menu_item_number_txt">數量</string>
+    <string name="menu_item_note_txt">備註</string>
+    <string name="menu_item_number_etxt">請輸入數量</string>
+    <string name="menu_item_type_all_etxt">0 ~ 全部</string>
+    
+    <string name="change_table_title_txt">換桌</string>
+    <string name="change_table_no_orders_etxt">目前沒有訂單</string>
+    
+    <string name="change_table_confirm_orders_id_txt">訂單號碼:</string>
+    <string name="change_table_confirm_number_txt">人數:</string>
+    <string name="change_table_confirm_time_txt">時間:</string>
+    <string name="change_table_confirm_username_txt">點餐人員:</string>
+    <string name="change_table_confirm_select_table_txt">選擇桌號</string>
+    <string name="change_table_confirm_no_empty_tables_etxt">目前沒有空桌</string>
+    <string name="change_table_confirm_success_txt">換桌成功</string>
+    
+    <string name="checkout_title_txt">結帳</string>
+    <string name="checkout_orders_id_txt">訂單號碼:</string>
+    <string name="checkout_orders_number_txt">人數:</string>
+    <string name="checkout_orders_time_txt">時間:</string>
+    <string name="checkout_orders_user_name_txt">點餐人員:</string>
+    <string name="checkout_item_serial_txt">序號</string>
+    <string name="checkout_item_name_txt">名稱</string>
+    <string name="checkout_item_amount_txt">小  計</string>
+    <string name="checkout_item_price_txt">單  價</string>
+    <string name="checkout_item_number_txt">數量</string>    
+    <string name="checkout_no_orders_etxt">目前沒有可結帳的訂單</string>
+    <string name="checkout_success_txt">結帳成功</string>
+    <string name="checkout_total_txt">合計： $</string>
+    
+    <string name="sync_title_txt">資料同步</string>
+    <string name="sync_working_txt">資料同步中...</string>
+    <string name="sync_data_txt">資料</string>
+    <string name="sync_file_txt">圖檔</string>
+    <string name="sync_done_txt">完成</string>
+    
+    <string name="config_title_txt">設定</string>
+    <string name="config_server_title_txt">伺服器</string>
+    <string name="config_server_ip_title_txt">伺服器IP位址</string>
+    <string name="config_server_port_title_txt">伺服器埠號</string>
+    <string name="config_server_sync_title_txt">登入後自動同步</string>
+    <string name="config_server_sync_on_txt">開啟</string>
+    <string name="config_server_sync_off_txt">關閉</string>
+        
+    <string name="delete_confirm_txt">確定要刪除</string>
+    
+    <string name="menu_added_already_txt">已經加入</string>
+    <string name="menu_add_menuitem_please_txt">請選擇菜單</string>
+    <string name="confirm_order_txt">確認訂單</string>
+    <string name="confirm_order_done_txt">訂單已傳送</string>
+    
+</resources>

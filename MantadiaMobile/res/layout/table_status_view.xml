@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+    <!-- 餐桌編號 -->
+    <TextView
+        android:id="@+id/tables_id"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:padding="5sp"
+        android:textSize="48sp" />
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5sp"
+        android:stretchColumns="1,3" >
+        <TableRow>
+            <TextView
+                android:id="@+id/label_orders_id"
+                android:paddingRight="2sp"
+                android:text="@string/table_status_orders_id_txt" />
+            <!-- 訂單編號 -->
+            <TextView android:id="@+id/orders_id" />
+            <TextView
+                android:id="@+id/label_orders_number"
+                android:paddingRight="2sp"
+                android:text="@string/table_status_orders_number_txt" />
+            <!-- 人數 -->
+            <TextView android:id="@+id/orders_number" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/label_orders_username"
+                android:paddingRight="2sp"
+                android:text="@string/table_status_orders_username_txt" />
+            <!-- 使用者名稱 -->
+            <TextView android:id="@+id/user_name" />
+            <TextView
+                android:id="@+id/label_orders_status"
+                android:paddingRight="2sp"
+                android:text="@string/table_status_orders_status_txt" />
+            <!-- 訂單狀態 -->
+            <TextView android:id="@+id/status_name" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/label_orders_time"
+                android:paddingRight="2sp"
+                android:text="@string/table_status_orders_time_txt" />
+            <!-- 日期時間 -->
+            <TextView
+                android:id="@+id/orders_time"
+                android:layout_span="3" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

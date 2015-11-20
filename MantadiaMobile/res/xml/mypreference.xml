@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen 
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <PreferenceCategory 
+        android:title="@string/config_server_title_txt" >
+        <!-- 伺服器IP位址 -->
+        <EditTextPreference
+            android:defaultValue="192.168.1.1"
+            android:key="SERVER_IP"
+            android:title="@string/config_server_ip_title_txt" />
+        <!-- 伺服器埠號 -->
+        <EditTextPreference
+            android:defaultValue="8080"
+            android:key="SERVER_PORT"
+            android:title="@string/config_server_port_title_txt" />
+        <!-- 自動同步資料 -->
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="AUTO_UPDATE"
+            android:title="@string/config_server_sync_title_txt" />
+    </PreferenceCategory>
+</PreferenceScreen>

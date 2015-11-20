@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <LinearLayout
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:baselineAligned="false"
+        android:orientation="vertical" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/panel_drawable"
+            android:orientation="horizontal"
+            android:paddingBottom="12dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:paddingTop="12dp" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="3sp"
+                android:text="@string/change_table_confirm_select_table_txt"
+                android:textSize="24sp" />
+            <!-- 選擇桌號 -->
+            <Spinner
+                android:id="@+id/empty_tables"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="3sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/panel_drawable"
+            android:orientation="horizontal" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="@string/orders_number_txt"
+                android:textSize="24sp" />
+            <!-- 人數 -->
+            <EditText
+                android:id="@+id/orders_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:focusable="false"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="#FFF"
+                android:textSize="24sp" />
+            <!-- 增加人數 -->
+            <ImageButton
+                android:id="@+id/orders_add_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:onClick="clickOrdersNumber"
+                android:src="@drawable/add" />
+            <!-- 減少人數 -->
+            <ImageButton
+                android:id="@+id/orders_minus_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:onClick="clickOrdersNumber"
+                android:src="@drawable/minus" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@android:drawable/bottom_bar"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:paddingTop="12dp" >
+            <!-- 確定 -->
+            <Button
+                android:id="@+id/select_table_cancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="okAndCancel"
+                android:text="@android:string/cancel"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+            <!-- 確定 -->
+            <Button
+                android:id="@+id/select_table_ok"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="okAndCancel"
+                android:text="@android:string/ok"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

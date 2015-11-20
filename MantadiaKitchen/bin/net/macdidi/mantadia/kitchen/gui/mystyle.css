@@ -1,0 +1,38 @@
+.label {
+    -fx-font-size: 24px;
+}
+
+#order-item-label {
+    -fx-font-size: 18px;
+}
+
+#order-item-note-label {
+    -fx-text-fill: darkblue;
+    -fx-font-size: 18px;
+}
+
+.button {
+    -fx-font-size: 24px;
+}
+
+.hbox {
+    -fx-padding: 6;
+    -fx-alignment: center;
+    -fx-spacing: 10px
+}
+
+.vbox {
+    -fx-spacing: 2px
+}
+
+.order-item-panel {
+    -fx-background-color: lightgrey;
+    -fx-background-radius: 5px, 5px, 5px, 5px;
+}
+
+.order-panel {
+    -fx-padding: 6px;
+    -fx-border-color: grey;
+    -fx-border-radius: 6px;
+    -fx-border-width: 6px;
+}

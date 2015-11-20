@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="net.macdidi.mantadia.mobile"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature android:name="android.hardware.wifi" />
+
+    <application
+        android:icon="@drawable/icon"
+        android:label="@string/app_name" >
+        <!-- 主畫面、登入 -->
+        <activity
+            android:name=".MantadiaMobileActivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 功能選單 -->
+        <activity
+            android:name="MainMenuActivity"
+            android:label="@string/main_menu_title_txt"
+            android:screenOrientation="portrait" />
+        <!-- 餐桌狀態 -->
+        <activity
+            android:name="TableStatusActivity"
+            android:label="@string/table_status_title_txt"
+            android:screenOrientation="portrait" />
+        <!-- 訂單 -->
+        <activity
+            android:name="OrdersActivity"
+            android:label="@string/orders_title_txt"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <!-- 新增與修改 -->
+                <action android:name="net.macdidi.mantadia.ADD_ORDERS" />
+                <action android:name="net.macdidi.mantadia.EDIT_ORDERS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- 點菜 -->
+        <activity
+            android:name="MenuItemActivity"
+            android:label="@string/menu_item_title_txt"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog" >
+            <intent-filter>
+                <!-- 新增與修改 -->
+                <action android:name="net.macdidi.mantadia.ADD_MENU_ITEM" />
+                <action android:name="net.macdidi.mantadia.EDIT_MENU_ITEM" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- 換桌 -->
+        <activity
+            android:name="ChangeTableActivity"
+            android:label="@string/change_table_title_txt"
+            android:screenOrientation="portrait" />
+        <!-- 確認換桌 -->
+        <activity
+            android:name="ChangeTableConfirmActivity"
+            android:label="@string/change_table_title_txt"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog" />
+        <!-- 結帳 -->
+        <activity
+            android:name="CheckOutActivity"
+            android:label="@string/checkout_title_txt"
+            android:screenOrientation="portrait" />
+        <!-- 確認結帳 -->
+        <activity
+            android:name="CheckOutConfirmActivity"
+            android:label="@string/checkout_title_txt"
+            android:screenOrientation="portrait" />
+        <!-- 資料同步 -->
+        <activity
+            android:name="SyncDataActivity"
+            android:label="@string/sync_title_txt"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog" >
+            <intent-filter>
+                <!-- 自動與手動同步 -->
+                <action android:name="net.macdidi.mantadia.SYNC_START" />
+                <action android:name="net.macdidi.mantadia.SYNC_WAIT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- 設定 -->
+        <activity
+            android:name="ConfigActivity"
+            android:label="@string/config_title_txt"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

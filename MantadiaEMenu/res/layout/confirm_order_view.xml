@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="0"
+    android:paddingTop="5dp"
+    android:paddingLeft="4dp"
+    android:paddingRight="4dp"
+    android:paddingBottom="1dp">
+    <!-- 菜單圖片 -->
+    <ImageView 
+        android:id="@+id/order_confirm_image"
+        android:layout_width="128sp"
+        android:layout_height="128sp"
+        android:padding="6sp"
+        android:layout_alignParentLeft="true"
+        android:gravity="center" />
+    <!-- 菜單名稱 -->
+    <TextView
+        android:id="@+id/order_confirm_name"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:textSize="48sp"
+        android:padding="6sp"
+        android:layout_toRightOf="@id/order_confirm_image" />
+    <!-- 刪除 -->   
+    <ImageButton
+        android:id="@+id/order_confirm_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_margin="6sp"
+        android:background="#999"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/delete_item" />
+    <!-- 增加數量 -->        
+    <ImageButton
+        android:id="@+id/order_confirm_add"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_margin="6sp"
+        android:background="#999"
+        android:layout_toLeftOf="@id/order_confirm_delete"
+        android:src="@drawable/add_item" />
+    <!-- 減少數量 -->
+    <ImageButton
+        android:id="@+id/order_confirm_minus"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_margin="6sp"
+        android:background="#999"
+        android:layout_toLeftOf="@id/order_confirm_add"
+        android:src="@drawable/minus_item" />
+    <!-- 數量 -->   
+    <TextView
+        android:id="@+id/order_confirm_number"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:textSize="48sp"
+        android:padding="6sp"
+        android:layout_marginRight="24sp"
+        android:layout_toLeftOf="@id/order_confirm_minus" />     
+</RelativeLayout>

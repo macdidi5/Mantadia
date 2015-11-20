@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:background="@android:drawable/bottom_bar"
+        android:orientation="horizontal"
+        android:paddingBottom="1dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:paddingTop="5dp" >
+        <!-- 餐桌編號 -->
+        <TextView
+            android:id="@+id/checkout_tables_id"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="5sp"
+            android:text="0"
+            android:textColor="#000"
+            android:textSize="48sp" />
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5sp"
+            android:stretchColumns="1,3" >
+            <TableRow>
+                <TextView
+                    android:text="@string/checkout_orders_id_txt"
+                    android:textColor="#000" />
+                <!-- 訂單編號 -->
+                <TextView
+                    android:id="@+id/checkout_orders_id"
+                    android:text=""
+                    android:textColor="#000" />
+                <TextView
+                    android:text="@string/checkout_orders_number_txt"
+                    android:textColor="#000" />
+                <!-- 人數 -->
+                <TextView
+                    android:id="@+id/checkout_orders_number"
+                    android:text=""
+                    android:textColor="#000" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:text="@string/checkout_orders_time_txt"
+                    android:textColor="#000" />
+                <!-- 日期時間 -->
+                <TextView
+                    android:id="@+id/checkout_orders_time"
+                    android:layout_span="3"
+                    android:text=""
+                    android:textColor="#000" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:text="@string/checkout_orders_user_name_txt"
+                    android:textColor="#000" />
+                <!-- 使用者名稱 -->
+                <TextView
+                    android:id="@+id/checkout_user_name"
+                    android:layout_span="3"
+                    android:text=""
+                    android:textColor="#000" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:background="@android:drawable/bottom_bar"
+        android:orientation="horizontal"
+        android:paddingBottom="1dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:paddingTop="5dp" >
+        <!-- 訂單金額合計 -->
+        <TextView
+            android:id="@+id/checkout_total_amount"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="5sp"
+            android:text="合計： $350"
+            android:textColor="#000"
+            android:textSize="32sp" />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:paddingBottom="1dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:paddingTop="5dp" >
+        <TextView
+            android:id="@+id/checkout_title_serial"
+            android:layout_width="0.3in"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:padding="5sp"
+            android:text="@string/checkout_item_serial_txt" />
+        <TextView
+            android:id="@+id/checkout_title_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/checkout_title_serial"
+            android:padding="5sp"
+            android:text="@string/checkout_item_name_txt" />
+        <TextView
+            android:id="@+id/checkout_title_amount"
+            android:layout_width="0.4in"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:padding="5sp"
+            android:text="@string/checkout_item_amount_txt" />
+        <TextView
+            android:id="@+id/checkout_title_price"
+            android:layout_width="0.4in"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/checkout_title_amount"
+            android:gravity="center"
+            android:padding="5sp"
+            android:text="@string/checkout_item_price_txt" />
+        <TextView
+            android:id="@+id/checkout_title_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/checkout_title_price"
+            android:gravity="center"
+            android:padding="5sp"
+            android:text="@string/checkout_item_number_txt" />
+    </RelativeLayout>
+    <!-- 訂單明細 -->
+    <ListView
+        android:id="@+id/checkout_order_items"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:dividerHeight="2sp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:background="@android:drawable/bottom_bar"
+        android:orientation="horizontal"
+        android:paddingBottom="1dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:paddingTop="5dp" >
+        <!-- 取消 -->
+        <Button
+            android:id="@+id/checkout_confirm_cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@android:string/cancel"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+        <!-- 確定 -->
+        <Button
+            android:id="@+id/checkout_confirm_ok"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@android:string/ok"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </LinearLayout>
+</LinearLayout>
